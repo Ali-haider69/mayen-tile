@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Bath, ShowerHead, Flame, ChefHat, Maximize, Home, ArrowRight } from "lucide-react";
 import { CTASection } from "@/components/sections/CTASection";
+import { ServicesSchema, BreadcrumbSchema } from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
   title: "Services | Mayen Tile — Premium Tile Installation",
@@ -99,6 +100,8 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
+      <ServicesSchema />
+      <BreadcrumbSchema items={[{ name: "Services", url: "/services" }]} />
       {/* Hero */}
       <section className="relative bg-primary pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">

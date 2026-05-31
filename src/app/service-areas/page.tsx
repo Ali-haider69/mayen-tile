@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { MapPin, CheckCircle } from "lucide-react";
 import { SERVICE_AREAS, SERVICES } from "@/lib/constants";
 import { CTASection } from "@/components/sections/CTASection";
+import { BreadcrumbSchema } from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
   title: "Service Areas | Mayen Tile — Silicon Valley Coverage",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function ServiceAreasPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Service Areas", url: "/service-areas" }]} />
       {/* Hero */}
       <section className="relative bg-primary pt-40 pb-20">
         <div className="max-w-7xl mx-auto px-6">

@@ -6,10 +6,16 @@ import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { ServiceAreasSection } from "@/components/sections/ServiceAreas";
 import { CTASection } from "@/components/sections/CTASection";
+import { WebPageSchema } from "@/components/seo/SchemaMarkup";
 
 export default function HomePage() {
   return (
     <>
+      <WebPageSchema
+        title="Mayen Tile | Luxury Tile & Stone Installation"
+        description="Premium tile installation for Silicon Valley's finest homes."
+        url="/"
+      />
       <Hero />
       <TrustBar />
       <WhyChooseUs />

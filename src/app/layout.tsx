@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ContactWidget } from "@/components/ui/ContactWidget";
+import { OrganizationSchema, LocalBusinessSchema } from "@/components/seo/SchemaMarkup";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,6 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
+        <OrganizationSchema />
+        <LocalBusinessSchema />
         <Header />
         <main className="flex-1">{children}</main>
         <ContactWidget />

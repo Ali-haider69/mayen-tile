@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Award, Shield, Users, Eye } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 import { CTASection } from "@/components/sections/CTASection";
+import { BreadcrumbSchema, WebPageSchema } from "@/components/seo/SchemaMarkup";
 
 export const metadata: Metadata = {
   title: "About | Mayen Tile — Silicon Valley Tile Artisans",
@@ -35,6 +36,8 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+      <WebPageSchema title="About Mayen Tile" description="Silicon Valley's premier tile installation company." url="/about" />
+      <BreadcrumbSchema items={[{ name: "About", url: "/about" }]} />
       {/* Hero */}
       <section className="relative bg-primary pt-40 pb-20">
         <div className="absolute inset-0 opacity-5">
